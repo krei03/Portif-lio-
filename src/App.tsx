@@ -22,7 +22,7 @@ import {
   ArrowUpRight
 } from 'lucide-react';
 
-import { DEVELOPER_INFO, PROJECTS, EXPERIENCES } from './data';
+import { DEVELOPER_INFO, PROJECTS } from './data';
 import { ParticleBackground } from './components/ParticleBackground';
 import { ActiveAbout } from './components/ActiveAbout';
 import { TechStack } from './components/TechStack';
@@ -63,7 +63,7 @@ export default function App() {
 
   // Track active section on scroll
   useEffect(() => {
-    const sections = ['hero', 'projetos', 'sobre', 'skills', 'experiencia', 'contato'];
+    const sections = ['hero', 'sobre', 'projetos', 'skills', 'contato'];
     
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 120; // offset
@@ -238,7 +238,7 @@ export default function App() {
               rel="noopener noreferrer"
               className="cursor-pointer px-6 py-3.5 rounded-full glass hover:bg-white/[0.08] text-zinc-100 hover:text-white font-semibold tracking-wide text-xs transition-all flex items-center gap-2 shadow-[0_4px_16px_rgba(0,0,0,0.2)]"
             >
-              Discutir Projeto Contrato
+              Contato
               <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400" />
             </a>
           </motion.div>
@@ -267,7 +267,7 @@ export default function App() {
         {/* Elegant downwards mouse scroll chevron beacon */}
         <motion.button
           type="button"
-          onClick={() => handleScrollToSection('projetos')}
+          onClick={() => handleScrollToSection('sobre')}
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           className="mt-12 text-zinc-650 hover:text-white cursor-pointer z-10 flex flex-col items-center gap-1 opacity-70"
@@ -278,7 +278,27 @@ export default function App() {
       </section>
 
 
-      {/* 2. PROJECTS SHOWCASE SECTION */}
+      {/* 2. ABOUT ME BENTO SECTION */}
+      <section
+        id="sobre"
+        className="py-24 px-6 bg-zinc-950/20 backdrop-blur-sm relative z-10"
+      >
+        <div className="max-w-7xl mx-auto">
+          {/* Section Heading */}
+          <div className="mb-16 text-center space-y-2">
+            <span className="text-[10px] font-mono tracking-widest text-cyan-300 font-bold uppercase">&gt;_ COMPROMISSO INTEGRAL_</span>
+            <h2 className="text-3xl md:text-5xl font-serif text-white italic tracking-tight">
+              Por Trás do Código
+            </h2>
+          </div>
+
+          {/* Bento Grid Module */}
+          <ActiveAbout />
+        </div>
+      </section>
+
+
+      {/* 3. PROJECTS SHOWCASE SECTION */}
       <section
         id="projetos"
         className="py-24 px-6 max-w-7xl mx-auto relative z-10"
@@ -331,26 +351,6 @@ export default function App() {
       </section>
 
 
-      {/* 3. ABOUT ME BENTO SECTION */}
-      <section
-        id="sobre"
-        className="py-24 px-6 bg-zinc-950/20 backdrop-blur-sm relative z-10"
-      >
-        <div className="max-w-7xl mx-auto">
-          {/* Section Heading */}
-          <div className="mb-16 text-center space-y-2">
-            <span className="text-[10px] font-mono tracking-widest text-cyan-300 font-bold uppercase">&gt;_ COMPROMISSO INTEGRAL_</span>
-            <h2 className="text-3xl md:text-5xl font-serif text-white italic tracking-tight">
-              Por Trás do Código
-            </h2>
-          </div>
-
-          {/* Bento Grid Module */}
-          <ActiveAbout />
-        </div>
-      </section>
-
-
       {/* 4. SKILLS / TECH STACK SECTION */}
       <section
         id="skills"
@@ -372,78 +372,7 @@ export default function App() {
       </section>
 
 
-      {/* 5. PROFESSIONAL EXPERIENCE TIMELINE SECTION */}
-      <section
-        id="experiencia"
-        className="py-24 px-6 bg-zinc-950/45 backdrop-blur-sm relative z-10"
-      >
-        <div className="max-w-4xl mx-auto">
-          {/* Section Heading */}
-          <div className="mb-16 text-center space-y-2">
-            <span className="text-[10px] font-mono tracking-widest text-cyan-300 font-bold uppercase">&gt;_ HISTÓRICO PROFISSIONAL</span>
-            <h2 className="text-3xl md:text-5xl font-serif text-white italic tracking-tight">
-              Trajetória de Impacto
-            </h2>
-          </div>
-
-          {/* Timeline Wrapper */}
-          <div className="relative border-l border-zinc-800/80 ml-4 md:ml-10 space-y-12 py-4">
-            {EXPERIENCES.map((exp, idx) => (
-              <motion.div
-                key={exp.id}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.7, delay: idx * 0.15 }}
-                className="relative pl-8 md:pl-12 group"
-              >
-                {/* Glowing Node Dot */}
-                <div className="absolute -left-[6.5px] top-1.5 w-3 h-3 rounded-full bg-zinc-950 border border-zinc-800 flex items-center justify-center transition-all group-hover:border-cyan-400 group-hover:shadow-[0_0_8px_rgba(34,211,238,1)] duration-300">
-                  <div className="w-1 h-1 rounded-full bg-cyan-400"></div>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
-                    <div>
-                      <h3 className="text-xl font-serif text-white font-semibold flex items-center gap-2">
-                        {exp.role}
-                        <span className="text-zinc-600 font-mono text-xs font-normal">@</span>
-                        <span className="text-cyan-400 font-mono text-xs font-bold uppercase tracking-wider">{exp.company}</span>
-                      </h3>
-                    </div>
-                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest bg-zinc-950/80 px-2 py-0.5 border border-zinc-900 rounded font-bold">
-                      {exp.period}
-                    </span>
-                  </div>
-
-                  {/* Bullet accomplishments */}
-                  <ul className="space-y-2 text-xs md:text-sm text-zinc-400 leading-relaxed font-sans list-disc list-outside pl-4">
-                    {exp.description.map((bullet, bulkIdx) => (
-                      <li key={bulkIdx}>
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Skill Badge details */}
-                  <div className="flex flex-wrap gap-1.5 pt-2 font-mono">
-                    {exp.skills.map((skill) => (
-                      <span key={skill} className="text-[8.5px] tracking-wide font-semibold text-zinc-350 bg-zinc-900 px-2 py-1 rounded border border-zinc-850">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-
-        </div>
-      </section>
-
-
-      {/* 6. CONTACT SECTION */}
+      {/* 5. CONTACT SECTION */}
       <section
         id="contato"
         className="py-24 px-6 max-w-5xl mx-auto relative z-10"

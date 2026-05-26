@@ -44,19 +44,19 @@ export const ActiveAbout: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
-            <span className="text-[10px] text-zinc-400 font-mono tracking-widest uppercase">ENGENHARIA COM PROPÓSITO</span>
+            <span className="text-base md:text-lg text-white font-serif tracking-tight uppercase">TRANSFORMANDO IDEIAS EM PROJETOS REAIS</span>
           </div>
           
-          <h3 className="text-2xl font-serif text-white tracking-tight mb-4">
-            Transformando visões ambiciosas em sistemas indestrutíveis.
-          </h3>
-          
           <p className="text-sm text-zinc-400 leading-relaxed space-y-4 font-sans">
-            Olá, eu sou o <strong className="text-white font-medium">{DEVELOPER_INFO.name}</strong>. Nos últimos anos, dediquei minha carreira a arquitetar e programar produtos digitais de alta confiabilidade. Sou apaixonado por otimizar loops até chegarmos na latência máxima de milissegundos e criar interfaces sensoriais que tornam o uso do software um prazer indescritível.
+            Olá, eu sou o <strong className="text-white font-medium">{DEVELOPER_INFO.name}</strong>. Sou desenvolvedor full stack e venho construindo projetos focados em criar experiências digitais modernas, funcionais e bem organizadas.
           </p>
           
           <p className="text-sm text-zinc-400 leading-relaxed mt-3 font-sans">
-            Com expertise integral de ponta a ponta — do refinamento de animações no navegador ao design estrutural de bancos de dados relacional e governança cloud clusters — eu atuo como a ponte definitiva entre o design audacioso e a viabilidade tecnológica de startups globais.
+            Tenho grande interesse em desenvolvimento web e gosto de transformar ideias em sistemas reais, buscando sempre unir visual agradável, usabilidade e funcionamento eficiente em cada projeto.
+          </p>
+
+          <p className="text-sm text-zinc-400 leading-relaxed mt-3 font-sans">
+            Estou sempre em busca de aprender coisas novas, melhorar meus projetos e criar soluções que transmitam profissionalismo, organização e uma boa experiência para quem utiliza.
           </p>
         </div>
 
@@ -98,14 +98,9 @@ export const ActiveAbout: React.FC = () => {
         </div>
 
         {/* Info panel */}
-        <div className="p-4 border-t border-zinc-800/60 bg-zinc-950/40 flex items-center justify-between">
+        <div className="p-4 border-t border-zinc-800/60 bg-zinc-950/40">
           <div>
             <p className="text-xs font-serif italic text-white font-semibold">{DEVELOPER_INFO.name}</p>
-            <p className="text-[9px] font-mono text-zinc-500 tracking-wider">MEMBER ID #0829</p>
-          </div>
-          <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="text-[8px] font-semibold text-emerald-300 font-mono">CONFIRMED</span>
           </div>
         </div>
       </motion.div>

@@ -25,10 +25,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
   const navItems = [
     { label: 'Início', target: 'hero' },
-    { label: 'Projetos', target: 'projetos' },
     { label: 'Sobre', target: 'sobre' },
+    { label: 'Projetos', target: 'projetos' },
     { label: 'Tecnologias', target: 'skills' },
-    { label: 'Experiência', target: 'experiencia' },
     { label: 'Contato', target: 'contato' },
   ];
 
@@ -66,7 +65,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             </div>
             <div className="flex flex-col text-left">
               <span className="text-xs font-serif italic text-white tracking-wide font-semibold">{DEVELOPER_INFO.name}</span>
-              <span className="text-[8px] font-mono text-zinc-500 tracking-widest">{DEVELOPER_INFO.title}</span>
             </div>
           </button>
 

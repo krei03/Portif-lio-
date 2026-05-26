@@ -10,12 +10,12 @@ export const DEVELOPER_INFO = {
   github: "https://github.com/krei03",
   linkedin: "https://www.linkedin.com/in/kau%C3%A3-rei-702215254",
   location: "São Paulo, SP - Brasil",
-  status: "Disponível para projetos premium",
+  status: "Disponível para projetos",
   stats: [
-    { value: "1+ Ano", label: "De Experiência" },
+    { value: "1+ Ano", label: "De Prática" },
     { value: "15+", label: "Landing Pages & Sistemas" },
     { value: "Full Stack", label: "Frontend & Backend" },
-    { value: "CRM Systems", label: "Experiência de Gestão" }
+    { value: "CRM Systems", label: "Gestão de CRM" }
   ]
 };
 
