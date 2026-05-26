@@ -21,17 +21,13 @@ export const FloatingWhatsApp: React.FC = () => {
             <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-emerald-500/0 via-emerald-400 to-emerald-500/0"></div>
             
             <div className="flex gap-2.5 items-start">
-              <div className="w-9 h-9 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center shrink-0 relative">
-                <span className="font-serif italic font-bold text-emerald-400 text-xs">G</span>
-                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-zinc-950"></span>
-              </div>
               <div className="space-y-1">
                 <div className="flex items-center gap-1.5">
                   <span className="text-[11px] font-bold text-white uppercase tracking-wider">{DEVELOPER_INFO.name}</span>
                 </div>
                 <p className="text-[10px] text-emerald-400 font-mono tracking-wider font-semibold uppercase">ONLINE AGORA</p>
                 <p className="text-xs text-zinc-400 leading-normal pt-1">
-                  Estou online para discutir projetos premium, consultoria técnica ou contratações de alta fidelidade. Como posso ajudar?
+                  Estou online para conversar sobre seus  projetos e sua ideas, Como posso ajudar?
                 </p>
               </div>
             </div>
